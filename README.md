@@ -1,6 +1,6 @@
 OptimizedArrays
 
-![output](https://github.com/JoBo33/SpeedDiffferenceOfVectorsAndLists/blob/master/SpeedDiifference.png "Output")
+![output](https://github.com/JoBo33/SpeedDifferenceOfVectorsAndLists/blob/master/SpeedDifference.png "Output")
 
 After testing multiple times I got the following average results (based on my laptop speed):
 1. Stack is faster than heap
