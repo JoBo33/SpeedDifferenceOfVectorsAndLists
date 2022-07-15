@@ -19,7 +19,7 @@ int main()
     }
     auto end1 = chrono::steady_clock::now();
 
-    std::cout << "Time1: " << chrono::duration_cast<chrono::microseconds>(end1 - start1).count() << " microseconds\n\n";
+    std::cout << "Time of vector on stack with push_back: " << chrono::duration_cast<chrono::microseconds>(end1 - start1).count() << " microseconds\n\n";
 
 
     auto start2 = chrono::steady_clock::now();
@@ -32,7 +32,7 @@ int main()
     }
     auto end2 = chrono::steady_clock::now();
 
-    std::cout << "Time2: " << chrono::duration_cast<chrono::microseconds>(end2 - start2).count() << " microseconds\n\n";
+    std::cout << "Time of vector on stack with push_back and with reserved memory: " << chrono::duration_cast<chrono::microseconds>(end2 - start2).count() << " microseconds\n\n";
 
 
     auto start3 = chrono::steady_clock::now();
@@ -44,7 +44,7 @@ int main()
     }
     auto end3 = chrono::steady_clock::now();
 
-    std::cout << "Time3: " << chrono::duration_cast<chrono::microseconds>(end3 - start3).count() << " microseconds\n\n";
+    std::cout << "Time of vector on stack with emplace_back: " << chrono::duration_cast<chrono::microseconds>(end3 - start3).count() << " microseconds\n\n";
 
 
     auto start4 = chrono::steady_clock::now();
@@ -57,7 +57,7 @@ int main()
     }
     auto end4 = chrono::steady_clock::now();
 
-    std::cout << "Time4: " << chrono::duration_cast<chrono::microseconds>(end4 - start4).count() << " microseconds\n\n";
+    std::cout << "Time of vector on stack with emplace_back and with reserved memory: " << chrono::duration_cast<chrono::microseconds>(end4 - start4).count() << " microseconds\n\n";
 
 
     auto start5 = chrono::steady_clock::now();
@@ -69,7 +69,7 @@ int main()
     }
     auto end5 = chrono::steady_clock::now();
 
-    std::cout << "ListTime1: " << chrono::duration_cast<chrono::microseconds>(end5 - start5).count() << " microseconds\n\n";
+    std::cout << "Time of list on stack with emplace_back: " << chrono::duration_cast<chrono::microseconds>(end5 - start5).count() << " microseconds\n\n";
     
     auto start6 = chrono::steady_clock::now();
     std::list<int> v6;
@@ -80,7 +80,7 @@ int main()
     }
     auto end6 = chrono::steady_clock::now();
 
-    std::cout << "ListTime2: " << chrono::duration_cast<chrono::microseconds>(end6 - start6).count() << " microseconds\n\n";
+    std::cout << "Time of list on stack with push_back: " << chrono::duration_cast<chrono::microseconds>(end6 - start6).count() << " microseconds\n\n";
 
 
 
@@ -94,7 +94,7 @@ int main()
     }
     auto end8 = chrono::steady_clock::now();
 
-    std::cout << "Time1Heap: " << chrono::duration_cast<chrono::microseconds>(end8 - start8).count() << " microseconds\n\n";
+    std::cout << "Time of vector on heap with push_back: " << chrono::duration_cast<chrono::microseconds>(end8 - start8).count() << " microseconds\n\n";
 
 
     auto start9 = chrono::steady_clock::now();
@@ -107,7 +107,7 @@ int main()
     }
     auto end9 = chrono::steady_clock::now();
 
-    std::cout << "Time2Heap: " << chrono::duration_cast<chrono::microseconds>(end9 - start9).count() << " microseconds\n\n";
+    std::cout << "Time of vector on heap with push_back and reserved memory: " << chrono::duration_cast<chrono::microseconds>(end9 - start9).count() << " microseconds\n\n";
 
 
     auto start10 = chrono::steady_clock::now();
@@ -119,7 +119,7 @@ int main()
     }
     auto end10 = chrono::steady_clock::now();
 
-    std::cout << "Time3Heap: " << chrono::duration_cast<chrono::microseconds>(end10 - start10).count() << " microseconds\n\n";
+    std::cout << "Time of vector on heap with emplace_back: " << chrono::duration_cast<chrono::microseconds>(end10 - start10).count() << " microseconds\n\n";
 
 
     auto start11 = chrono::steady_clock::now();
@@ -132,7 +132,7 @@ int main()
     }
     auto end11 = chrono::steady_clock::now();
 
-    std::cout << "Time4Heap: " << chrono::duration_cast<chrono::microseconds>(end11 - start11).count() << " microseconds\n\n";
+    std::cout << "Time of vector on heap with emplace_back and reserved memory: " << chrono::duration_cast<chrono::microseconds>(end11 - start11).count() << " microseconds\n\n";
 
 
     auto start12 = chrono::steady_clock::now();
@@ -144,7 +144,7 @@ int main()
     }
     auto end12 = chrono::steady_clock::now();
 
-    std::cout << "ListTime1Heap: " << chrono::duration_cast<chrono::microseconds>(end12 - start12).count() << " microseconds\n\n";
+    std::cout << "Time of list on heap with emplace_back: " << chrono::duration_cast<chrono::microseconds>(end12 - start12).count() << " microseconds\n\n";
     
     auto start13 = chrono::steady_clock::now();
     std::list<int>* v13 = new list<int>;
@@ -155,7 +155,7 @@ int main()
     }
     auto end13 = chrono::steady_clock::now();
 
-    std::cout << "ListTime2Heap: " << chrono::duration_cast<chrono::microseconds>(end13 - start13).count() << " microseconds\n\n";
+    std::cout << "Time of list on heap with push_back: " << chrono::duration_cast<chrono::microseconds>(end13 - start13).count() << " microseconds\n\n";
 
 
 }
